@@ -1,0 +1,25 @@
+<section class="login-container">
+  <form class="card-container" [formGroup]="loginForm">
+    <h2>Login</h2>
+
+    <div class="input-contauner">
+      <label for="">User</label>
+
+      <input type="text" [formControlName]="'user'">
+      @if (loginForm.get('user')?.getError('required') && loginForm.get('user')?.touched) {
+        <span>Este valor es requerido</span>
+      }
+    </div>
+
+    <div class="input-contauner">
+      <label for="">Password</label>
+
+      <input type="password" [formControlName]="'password'">
+      @if (loginForm.get('password')?.getError('required') && loginForm.get('password')?.touched) {
+        <span>Este valor es requerido</span>
+      }
+    </div>
+
+    <button (click)="signIn()" [disabled]="loginForm.invalid">Sign in</button>
+  </form>
+</section>

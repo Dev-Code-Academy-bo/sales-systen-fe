@@ -1,0 +1,22 @@
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-container {
+  width: 400px;
+  height: 400px;
+  padding: 30px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  border: 1px solid black;
+}
+
+.input-contauner {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+}
