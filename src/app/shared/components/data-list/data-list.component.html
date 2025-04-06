@@ -1,0 +1,18 @@
+<table>
+  <thead>
+    <tr>
+      @for (item of columns; track $index) {
+        <th>{{ item }}</th>
+      }
+    </tr>
+  </thead>
+  <tbody>
+    @for (item of dataList; track $index) {
+      <tr>
+        @for (col of columns; track $index) {
+          <td>{{ item[col] }}</td>
+        }
+      </tr>
+    }
+  </tbody>
+</table>

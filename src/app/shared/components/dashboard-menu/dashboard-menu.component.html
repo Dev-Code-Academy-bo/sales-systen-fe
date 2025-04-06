@@ -1,0 +1,13 @@
+<section class="aside-menu-container">
+@for (menuItem of menuItems; track $index) {
+  <div class="title-container">
+    <a [routerLink]="[menuItem.route]">{{menuItem.title}}</a>
+  </div>
+
+  <div class="subtitle-container">
+    @for (item of menuItem.subtitle; track $index) {
+    <a [routerLink]="[item.route]">{{item.title}}</a>
+    }
+  </div>
+}
+</section>

@@ -1,8 +1,9 @@
 import { Routes } from '@angular/router';
 import { LoginComponent } from './auth/components/login/login.component';
-import { DashboardComponent } from './auth/components/dashboard/dashboard.component';
-import { UserComponent } from './user/components/user/user.component';
+import { DashboardComponent } from './dashboard/components/dashboard/dashboard.component';
 import { ProductComponent } from './product/components/product/product.component';
+import { CreateUserComponent } from './user/components/create-user/create-user.component';
+import { UsersListComponent } from './user/components/users-list/users-list.component';
 
 export const routes: Routes = [
   {
@@ -14,12 +15,12 @@ export const routes: Routes = [
     component: DashboardComponent,
     children: [
       {
-        path: 'user',
-        component: UserComponent
+        path: 'create-user',
+        component: CreateUserComponent
       },
       {
-        path: 'product',
-        component: ProductComponent
+        path: 'users-list',
+        component: UsersListComponent
       }
     ]
   }

@@ -1,3 +1,47 @@
 body {
   margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+
+  input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+
+    &:focus {
+      border-color: #36815c;
+    }
+  }
+
+  label {
+    font-size: 14px;
+    color: #333;
+  }
+}
+
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #36815c;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #2a5e4a;
+  }
 }

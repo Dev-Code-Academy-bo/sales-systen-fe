@@ -1,0 +1,39 @@
+.aside-menu-container {
+  width: 100%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  color: white;
+  margin-bottom: 6px;
+
+
+  .title-container {
+    width: auto;
+
+    a {
+      height: 30px;
+      display: flex;
+      align-items: center;
+      padding-left: 10px;
+      background-color: #36815c;
+    }
+  }
+
+  .subtitle-container {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    padding-left:10px;
+    gap: 3px;
+
+    a {
+      height: 30px;
+      display: flex;
+      align-items: center;
+      background-color: #169670a8;
+      padding-left: 10px;
+      border-radius: 5px;
+    }
+  }
+}

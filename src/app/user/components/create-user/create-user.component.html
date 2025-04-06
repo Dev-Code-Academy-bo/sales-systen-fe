@@ -1,0 +1,48 @@
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+  <div class="form-input-container">
+    <label>Nombre:</label>
+    <input formControlName="name" type="text" />
+  </div>
+
+  <div class="form-input-container">
+    <label>Apellido:</label>
+    <input formControlName="lastname" type="text" />
+  </div>
+
+  <div class="form-input-container">
+    <label>CI:</label>
+    <input formControlName="ci" type="text" />
+  </div>
+
+  <div class="form-input-container">
+    <label>Usuario:</label>
+    <input formControlName="username" type="text" />
+  </div>
+
+  <div class="form-input-container">
+    <label>Contraseña:</label>
+    <input formControlName="password" type="password" />
+  </div>
+
+  <div class="form-input-container">
+    <label>Teléfono:</label>
+    <input formControlName="phono" type="text" />
+  </div>
+
+  <div class="form-input-container">
+    <label>Correo:</label>
+    <input formControlName="address" type="email" />
+  </div>
+
+  <div class="form-input-container">
+    <label>Fecha de nacimiento:</label>
+    <input formControlName="birthdate" type="date" />
+  </div>
+
+  <div class="form-input-container">
+    <label>Foto:</label>
+    <input formControlName="photo" type="file" (change)="setPhoto(inputPhotoRef)"  #inputPhotoRef/>
+  </div>
+
+  <button class="btn" type="submit">Guardar</button>
+</form>
