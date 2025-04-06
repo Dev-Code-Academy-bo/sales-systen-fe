@@ -5,8 +5,8 @@
 
   .dashboard-menu-container {
     width: 330px;
-    height: 100%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 5px;
   }
 
   .dashboard-content-container {
@@ -16,13 +16,30 @@
 
     .dashboard-content-header {
       height: 50px;
-      background-color: rgb(163, 163, 163);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+
+      span {
+        font-size: 20px;
+        font-weight: bold;
+        color: #333;
+        padding-left: 20px;
+      }
     }
 
     .dashboard-content-body {
       height: calc(100% - 50px);
-      padding: 100px;;
+      padding: 80px;
+      overflow: auto;
     }
-
   }
+}
+
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
 }

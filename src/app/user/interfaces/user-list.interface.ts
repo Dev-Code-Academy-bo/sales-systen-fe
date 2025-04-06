@@ -3,5 +3,6 @@ export interface UserListInterface {
   lastname: string;
   username: string;
   phono: string;
+  photo: string;
   address: string;
 }

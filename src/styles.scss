@@ -7,10 +7,10 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  width: 100%;
+  width: auto;
+  padding: 5px 0;
 
   input {
-    width: 100%;
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
@@ -24,9 +24,16 @@ body {
   }
 
   label {
-    font-size: 14px;
+    font-size: 16px;
     color: #333;
+    font-weight: bold;
   }
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
 }
 
 
@@ -44,4 +51,17 @@ body {
   &:hover {
     background-color: #2a5e4a;
   }
+}
+
+.main-title {
+  font-size: 30px;
+  font-weight: bold;
+  color: #333;
+  display: flex;
+  justify-content: center;
+}
+
+.border-container {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }

@@ -23,13 +23,12 @@ export class UsersListComponent implements OnInit {
       this.usersList = data.map(user => {
         return {
           name: user.name,
-          email: user.address,
-          phone: user.phono,
-          address: user.address,
           lastname: user.lastname,
           username: user.username,
-          phono: user.phono
-        }
+          phono: user.phono,
+          photo: user.photo,
+          address: user.address,
+        } as UserListInterface;
       });
     });
 

@@ -12,11 +12,12 @@
     width: auto;
 
     a {
-      height: 30px;
+      height: 35px;
       display: flex;
       align-items: center;
       padding-left: 10px;
       background-color: #36815c;
+      border-radius: 5px;
     }
   }
 
@@ -28,12 +29,19 @@
     gap: 3px;
 
     a {
-      height: 30px;
+      height: 35px;
       display: flex;
       align-items: center;
-      background-color: #169670a8;
+      background-color: #59af9586;
       padding-left: 10px;
       border-radius: 5px;
+      color: #ffffff;
+      text-shadow:
+      1px 1px 0 #0000003d,
     }
+
+    .active {
+      border:2px solid #36815c7a;
+     }
   }
 }

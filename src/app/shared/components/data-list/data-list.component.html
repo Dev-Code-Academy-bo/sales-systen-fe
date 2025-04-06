@@ -4,6 +4,7 @@
       @for (item of columns; track $index) {
         <th>{{ item }}</th>
       }
+      <th>Actions</th>
     </tr>
   </thead>
   <tbody>
@@ -12,6 +13,7 @@
         @for (col of columns; track $index) {
           <td>{{ item[col] }}</td>
         }
+        <td class="actions"><img src="trash.png"></td>
       </tr>
     }
   </tbody>

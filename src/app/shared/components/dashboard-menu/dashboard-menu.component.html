@@ -6,8 +6,8 @@
 
   <div class="subtitle-container">
     @for (item of menuItem.subtitle; track $index) {
-    <a [routerLink]="[item.route]">{{item.title}}</a>
-    }
+    <a [routerLink]="[item.route]" routerLinkActive="active">{{item.title}}</a>
+  }
   </div>
 }
 </section>
