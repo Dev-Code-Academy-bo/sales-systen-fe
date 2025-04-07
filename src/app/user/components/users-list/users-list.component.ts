@@ -3,6 +3,7 @@ import { DataListComponent } from '../../../shared/components/data-list/data-lis
 import { UserHttpClientService } from '../../../core/services/user-http-client.service';
 import { UserInterface } from '../../../core/interfaces/user.interface';
 import { UserListInterface } from '../../interfaces/user-list.interface';
+import { take } from 'rxjs';
 
 @Component({
   selector: 'app-users-list',
@@ -19,19 +20,28 @@ export class UsersListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.userService.getAllUsers().subscribe((data: UserInterface[]) => {
+    this.createUserList();
+  }
+
+  deleteItem(event: string) {
+    this.userService.deleteUser(event).pipe(take(1)).subscribe(()=>{
+      this.createUserList();
+    });
+  }
+
+  createUserList(): void {
+    this.userService.getAllUsers().pipe(take(1)).subscribe((data: UserInterface[]) => {
       this.usersList = data.map(user => {
         return {
+          id: user._id,
           name: user.name,
           lastname: user.lastname,
           username: user.username,
           phono: user.phono,
-          photo: user.photo,
+          birthdate: user.birthdate,
           address: user.address,
         } as UserListInterface;
       });
     });
-
-
   }
 }

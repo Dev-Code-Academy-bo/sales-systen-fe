@@ -5,8 +5,8 @@
     <div class="form-input-container">
       <label for="">User</label>
 
-      <input type="text" [formControlName]="'user'">
-      @if (loginForm.get('user')?.getError('required') && loginForm.get('user')?.touched) {
+      <input type="text" [formControlName]="'username'">
+      @if (loginForm.get('username')?.getError('required') && loginForm.get('username')?.touched) {
         <span>Este valor es requerido</span>
       }
     </div>

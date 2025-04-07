@@ -1,8 +1,9 @@
 export interface UserListInterface {
+  id: string;
   name: string;
   lastname: string;
   username: string;
   phono: string;
-  photo: string;
+  birthdate: string;
   address: string;
 }

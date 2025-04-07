@@ -11,9 +11,13 @@
     @for (item of dataList; track $index) {
       <tr>
         @for (col of columns; track $index) {
-          <td>{{ item[col] }}</td>
+          @if (col == 'birthdate') {
+            <td>{{ item[col] | date: 'fullDate' }}</td>
+          } @else {
+            <td>{{ item[col] | titlecase }}</td>
+          }
         }
-        <td class="actions"><img src="trash.png"></td>
+        <td confirmModal (deleteItem)="deleteItem(item.id)" class="actions"><img src="trash.png"></td>
       </tr>
     }
   </tbody>

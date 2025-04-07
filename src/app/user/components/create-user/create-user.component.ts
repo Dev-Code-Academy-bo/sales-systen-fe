@@ -29,7 +29,7 @@ export class CreateUserComponent {
 
   onSubmit() {
     this._userService.setUser(this.buildFormData()).subscribe((response) => {
-      console.log(response);
+      this.userForm.reset();
     } );
   }
 
